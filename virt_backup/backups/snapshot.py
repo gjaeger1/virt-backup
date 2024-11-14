@@ -70,6 +70,7 @@ class DomExtSnapshot:
         self.dom = dom
 
         self.disks = disks
+        print("Initialized with disks:\n", disks,"\n")
 
         self._callbacks_registrer = callbacks_registrer
 
