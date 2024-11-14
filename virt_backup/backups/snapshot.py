@@ -117,6 +117,10 @@ class DomExtSnapshot:
         """
         snap_xml = self.gen_libvirt_snapshot_xml()
         flags = self._get_snapshot_flags(quiesce=self.quiesce)
+
+        print("snap_xml:\n", snap_xml, "\n")
+        print("flags:\n",flags,"\n")
+        
         try:
             return self.dom.snapshotCreateXML(snap_xml, flags)
         except libvirt.libvirtError as e:
